@@ -1,4 +1,6 @@
 class Item:
+
+    pay_rate=0.8 # price discount after 20% discount
     # Constructor - self function for class , which passes the parameters 
     def __init__(self,name:str,price:float,quantity:int):
 
@@ -8,15 +10,14 @@ class Item:
 
         #Assign to self object
         self.name=name
-        self.price=price
+        self.price=price  # instance attributes- which is used inside constructor
         self.quantity=quantity
 
     # Functions inside class are called methods
     def calculate_total_price(self):
         return self.price*self.quantity
 
-item1 = Item("phone",1000,3.0)
-item2 = Item("Laptop",500,-2)
+item1 = Item("phone",1000,3)
+item2 = Item("Laptop",500,2)
 
-print(item1.calculate_total_price())
-print(item2.calculate_total_price())
+print(Item.__dict__)
