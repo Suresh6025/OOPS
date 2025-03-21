@@ -16,8 +16,13 @@ class Item:
     # Functions inside class are called methods
     def calculate_total_price(self):
         return self.price*self.quantity
+    
+    #Apply discount on the price
+    def apply_discount(self):
+        return self.price * Item.pay_rate
 
 item1 = Item("phone",1000,3)
-item2 = Item("Laptop",500,2)
 
-print(Item.__dict__)
+item1.apply_discount()
+
+print(Item.__dict__) #Magic methods- which gives us all the attributes present inside the classes
