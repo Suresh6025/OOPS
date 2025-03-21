@@ -19,10 +19,11 @@ class Item:
     
     #Apply discount on the price
     def apply_discount(self):
-        return self.price * Item.pay_rate
+        self.price=self.price * Item.pay_rate
 
 item1 = Item("phone",1000,3)
 
 item1.apply_discount()
+print(item1.price)
 
-print(Item.__dict__) #Magic methods- which gives us all the attributes present inside the classes
+#print(Item.__dict__) #Magic methods- which gives us all the attributes present inside the classes
