@@ -26,4 +26,10 @@ item1 = Item("phone",1000,3)
 item1.apply_discount()
 print(item1.price)
 
+
+item2=Item("Laptop",3000,3)
+item2.pay_rate=0.7
+
+
+
 #print(Item.__dict__) #Magic methods- which gives us all the attributes present inside the classes
